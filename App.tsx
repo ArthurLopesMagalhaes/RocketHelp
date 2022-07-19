@@ -8,9 +8,9 @@ import { NativeBaseProvider } from "native-base";
 import { THEME } from "./src/styles/theme";
 
 import { StatusBar } from "react-native";
-import { SignIn } from "./src/screens/SignIn";
 import { Loading } from "./src/components/Loading";
-import { Home } from "./src/screens/Home";
+
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ export default function App() {
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      {fontsLoaded ? <Home /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </NativeBaseProvider>
   );
 }
